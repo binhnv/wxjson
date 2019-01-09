@@ -183,7 +183,7 @@
 // so if it is not defined, define it in the following lines
 // please note that we cannot use the wxWidget's counterpart 'wxSnprintf'
 // because the latter uses 'wxChar' but wxJSON only use 'char'
-#if !defined(snprintf) && defined(_MSC_VER)
+#if !defined(snprintf) && defined(_MSC_VER) && (_MSC_VER < 1500) // VC++ 8.0 and below
 #define snprintf _snprintf
 #endif
 

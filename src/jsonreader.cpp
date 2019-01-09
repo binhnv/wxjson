@@ -1848,7 +1848,9 @@ wxJSONReader::ConvertCharByChar( wxString& s, const wxMemoryBuffer& utf8Buffer )
  @return the last char read or -1 in case of EOF
 */
 
-union byte
+// this is causing error when compile source code in Visual Studio
+// it is not being used anywhere though
+union wxJSON_byte
 {
     unsigned char c[2];
     short int b;

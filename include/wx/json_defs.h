@@ -46,7 +46,7 @@
 #ifdef WXMAKINGDLL_JSON
     #define WXDLLIMPEXP_JSON                  WXEXPORT
     #define WXDLLIMPEXP_DATA_JSON(type)       WXEXPORT type
-#elif defined(WXUSINGDLL)
+#elif defined(WXUSINGDLL_JSON)
     #define WXDLLIMPEXP_JSON                  WXIMPORT
     #define WXDLLIMPEXP_DATA_JSON(type)       WXIMPORT type
 #else // not making nor using DLL
